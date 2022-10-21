@@ -47,14 +47,24 @@ class LinkedList {
     }
     return false;
   }
+
+  sum() {
+    let sum = 0;
+    let curr = this.head;
+
+    while (curr !== null) {
+      sum += curr.val;
+      curr = curr.next;
+    }
+    console.log(sum);
+  }
 }
 
 const list = new LinkedList();
 
-list.append("a");
-list.append("b");
-list.append("c");
-list.append("d");
+list.append(1);
+list.append(2);
+list.append(3);
+list.append(4);
 list.print();
-console.log(list.contains("x")); // false
-console.log(list.contains("a")); // true
+list.sum();
