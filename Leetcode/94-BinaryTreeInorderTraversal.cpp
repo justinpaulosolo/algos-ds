@@ -7,11 +7,11 @@ struct TreeNode {
     int val;
     TreeNode *left;
     TreeNode *right;
-}
+};
 
 class Solution {
 public:
-    void inorderHelp(Treenode* root, vector<int>& x) {
+    void inorderHelp(TreeNode* root, vector<int>& x) {
         if (root == NULL) return;
 
         inorderHelp(root->left, x);
@@ -19,12 +19,13 @@ public:
         inorderHelp(root->right, x);
     }
 
-    vector<int> inorderTraversal(Treenode* root){
+    vector<int> inorderTraversal(TreeNode* root){
         vector<int>x;
         inorderHelp(root, x);
         return x;
     }
-}
+};
 
 int main() {
+    return 0;
 }
